@@ -58,9 +58,9 @@ Aplikasi ini mengharapkan struktur data berikut pada Firebase:
 ![Dashboard Screenshot](public/main2.png)
 
 ---
-# 🖥️ Database Editor - Dashboard Mengubah Data Firebase
+# 🖥️ Database Control Center - Dashboard Mengubah Data Firebase
 
-Database Editor berfungsi menambah, menghapus, dan mengedit data di Firebase untuk menyesuaikan kondisi data yang akan ditampilkan di sistem monitoring sebelum lomba dimulai.
+Database Control Center berfungsi menambah, menghapus, dan mengedit data di Firebase untuk menyesuaikan kondisi data yang akan ditampilkan di sistem monitoring sebelum lomba dimulai.
 
 ![Dashboard Screenshot](public/db.png)
 
