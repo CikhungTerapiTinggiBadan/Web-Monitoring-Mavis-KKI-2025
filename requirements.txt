@@ -1,4 +1,3 @@
-pandas
-streamlit
+lucide-react
 firebase
-firebase-admin
+react-wavify
