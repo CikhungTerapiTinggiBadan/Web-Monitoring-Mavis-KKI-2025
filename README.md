@@ -1,6 +1,6 @@
 # 🚤 Mavis Sengkuni - GCS Wahana Dashboard
 
-Mavis Sengkuni adalah aplikasi Ground Control Station (GCS) berbasis web yang dikembangkan oleh tim **Mavis dari Universitas Negeri Yogyakarta**. Aplikasi ini dirancang untuk memantau pergerakan dan status wahana (kapal/drone air) secara real-time menggunakan integrasi database Firebase.
+Mavis Sengkuni adalah aplikasi Monitoring Wahana atau Vehicle Monitoring System (VMS) berbasis web yang dikembangkan oleh tim **Mavis Universitas Negeri Yogyakarta**. Aplikasi ini dirancang untuk memantau pergerakan dan status wahana (kapal/drone air) secara real-time menggunakan integrasi database Firebase.
 
 ![Dashboard Screenshot](public/main.png)
 
