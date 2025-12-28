@@ -106,8 +106,8 @@ Database Control Center berfungsi menambah, menghapus, dan mengedit data di Fire
     
 6.  **Menjalankan Simulasi:**
     Di Terminal lain jalankan
-   ```bash
+    ```bash
     python simulasi.py
-  ```
+    ```
 ---
 **Mavis Team - Universitas Negeri Yogyakarta**
