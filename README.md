@@ -42,7 +42,7 @@ Aplikasi ini mengharapkan struktur data berikut pada Firebase:
 
 2.  **Instal dependensi:**
     ```bash
-    npm install
+    npm install requirements.txt
     ```
 
 3.  **Konfigurasi Firebase:**
