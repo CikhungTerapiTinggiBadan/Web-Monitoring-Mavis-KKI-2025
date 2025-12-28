@@ -1,4 +1,4 @@
-# 🚤 Mavis Sengkuni - GCS Wahana Dashboard
+# 🚤 Mavis Sengkuni - Monitoring Wahana Dashboard
 
 Mavis Sengkuni adalah aplikasi Monitoring Wahana atau Vehicle Monitoring System (VMS) berbasis web yang dikembangkan oleh tim **Mavis Universitas Negeri Yogyakarta**. Aplikasi ini dirancang untuk memantau pergerakan dan status wahana ASV (Autonomous Surface Vehicle) "Sengkuni" secara real-time menggunakan integrasi database Firebase.
 
@@ -47,7 +47,7 @@ Aplikasi ini mengharapkan struktur data berikut pada Firebase:
     ```
 
 3.  **Konfigurasi Firebase:**
-    Pastikan file `firebaseConfig.js` sudah dikonfigurasi dengan API Key proyek Anda.
+    Pastikan file `firebaseConfig.js` sudah dikonfigurasi dengan API Key proyek. Pakai .env.local kalo sempat.
 
 4.  **Jalankan aplikasi:**
     ```bash
@@ -55,5 +55,59 @@ Aplikasi ini mengharapkan struktur data berikut pada Firebase:
     ```
     Aplikasi akan tersedia di `http://localhost:3000`.
 
+![Dashboard Screenshot](public/main2.png)
+
+---
+# 🖥️ Database Editor - Dashboard Mengubah Data Firebase
+
+Database Editor berfungsi menambah, menghapus, dan mengedit data di Firebase untuk menyesuaikan kondisi data yang akan ditampilkan di sistem monitoring sebelum lomba dimulai.
+
+![Dashboard Screenshot](public/db.png)
+
+## Fitur Utama
+
+* **Reset Database:** Fitur untuk mengosongkan nilai dinamis databases seperti checkpoint time, serta surface dan underwater capture sebelum memulai misi baru.
+* **Mission Planner:** Mengunggah koordinat lintasan (Lintasan A atau B) secara otomatis ke Firebase.
+* **Data Export:** Mengunduh log riwayat checkpoint dan data telemetri ke format JSON atau Excel (.xlsx) untuk analisis pasca-misi lomba.
+* **Simulation Monitoring:** Menjalankan sebuah script python yang mensimulasikan jalannya wahana.
+
+
+## Tech Stack
+
+* **Framework:** Streamlit
+* **Database:** Firebase Realtime Database
+* **Components:** * `pandas`
+    * `Openpyxl`
+
+## Cara Menjalankan Lokal
+
+1.  **Clone repositori:**
+    ```bash
+    git clone [https://github.com/username/mavis-sengkuni.git](https://github.com/username/mavis-sengkuni.git)
+    cd mavis-sengkuni
+    ```
+
+2.  **Instal dependensi:**
+    ```bash
+    pip install pyrequirements.txt
+    ```
+
+3.  **Persiapan Konfigurasi Firebase:**
+    Pastikan file `serviceAccountKey.json` sudah diunduh dan database URL sudah disalin.
+
+4.  **Jalankan aplikasi:**
+    ```bash
+    streamlit run crud.py
+    ```
+    Aplikasi akan tersedia di `http://localhost:8501/`.
+
+5.  **Konfigurasi Firebase:**
+    Pilih file `serviceAccountKey.json` dan masukkan database URL sesuai arahan.
+    
+6.  **Menjalankan Simulasi:**
+    Di Terminal lain jalankan
+   ```bash
+    python simulasi.py
+    ```
 ---
 **Mavis Team - Universitas Negeri Yogyakarta**
