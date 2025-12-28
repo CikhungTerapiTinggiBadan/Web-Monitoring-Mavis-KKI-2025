@@ -14,6 +14,7 @@ Mavis Sengkuni adalah aplikasi Monitoring Wahana atau Vehicle Monitoring System 
 * **Sistem Monitoring Checkpoint:** Tabel log otomatis yang mencatat waktu, koordinat, dan kecepatan setiap kali wahana melewati titik checkpoint (1-13).
 * **Dual-Camera Capture:** Menampilkan hasil tangkapan gambar terbaru dari dua kamera (Surface & Underwater) dalam format Base64.
 * **Lintasan Selector:** Fitur untuk memilih mode lintasan (A atau B) yang menyesuaikan orientasi navigasi pada dashboard.
+* **Livestream:** Video Livestream Embeded dari Youtube.com yang menampilkan POV dari wahana secara real-time.
 
 ## Tech Stack
 
