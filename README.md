@@ -89,7 +89,7 @@ Database Control Center berfungsi menambah, menghapus, dan mengedit data di Fire
 
 2.  **Instal dependensi:**
     ```bash
-    pip install pyrequirements.txt
+    pip install py_requirements.txt
     ```
 
 3.  **Persiapan Konfigurasi Firebase:**
