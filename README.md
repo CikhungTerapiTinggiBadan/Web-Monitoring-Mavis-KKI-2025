@@ -1,20 +1,20 @@
-# 🚤 Mavis Sengkuni - Monitoring Wahana Dashboard
+# 🚤 Mavis Sengkuni - Vehicle Monitoring Dashboard
 
-Mavis Sengkuni adalah aplikasi Monitoring Wahana atau Vehicle Monitoring System (VMS) berbasis web yang dikembangkan oleh tim **Mavis Universitas Negeri Yogyakarta**. Aplikasi ini dirancang untuk memantau pergerakan dan status wahana ASV (Autonomous Surface Vehicle) "Sengkuni" secara real-time menggunakan integrasi database Firebase.
+Mavis Sengkuni is a web-based Vehicle Monitoring System (VMS) application developed by the **Mavis Team from Yogyakarta State University (UNY)**. This application is designed to monitor the movement and status of the "Sengkuni" ASV (Autonomous Surface Vehicle) in real-time using Firebase database integration.
 
 ![Dashboard Screenshot](public/main.png)
 
-## Fitur Utama
+## Key Features
 
-* **Real-Time Telemetry Data:** Integrasi langsung dengan Firebase Realtime Database untuk menampilkan koordinat GPS, *Course Over Ground* (COG), dan kecepatan (KMH/Knot) secara instan.
-* **Peta Interaktif (MapLibre):** Visualisasi posisi wahana di peta dengan fitur:
-    * **Trajectory Tracking:** Garis merah yang menunjukkan riwayat jalur yang telah dilalui.
-    * **Heading & COG:** Indikator arah hadap wahana dan proyeksi arah gerak (garis kuning).
-    * **Dynamic Grid:** Grid dinamis pada peta untuk membantu estimasi jarak antar titik.
-* **Sistem Monitoring Checkpoint:** Tabel log otomatis yang mencatat waktu, koordinat, dan kecepatan setiap kali wahana melewati titik checkpoint (1-13).
-* **Dual-Camera Capture:** Menampilkan hasil tangkapan gambar terbaru dari dua kamera (Surface & Underwater) dalam format Base64.
-* **Lintasan Selector:** Fitur untuk memilih mode lintasan (A atau B) yang menyesuaikan orientasi navigasi pada dashboard.
-* **Livestream:** Video Livestream Embeded dari Youtube.com yang menampilkan POV dari wahana secara real-time.
+* **Real-Time Telemetry Data:** Direct integration with Firebase Realtime Database to instantly display GPS coordinates, *Course Over Ground* (COG), and speed (KMH/Knot).
+* **Interactive Map (MapLibre):** Visualization of the vehicle's position on a map featuring:
+    * **Trajectory Tracking:** A red line indicating the history of the path traveled.
+    * **Heading & COG:** Indicators for the vehicle's heading and projected direction of motion (yellow line).
+    * **Dynamic Grid:** A dynamic grid on the map to assist in estimating distances between points.
+* **Checkpoint Monitoring System:** An automated log table that records the time, coordinates, and speed every time the vehicle passes a checkpoint (1-13).
+* **Dual-Camera Capture:** Displays the latest image captures from two cameras (Surface & Underwater) in Base64 format.
+* **Track Selector:** A feature to select the track mode (A or B) which adjusts the navigation orientation on the dashboard.
+* **Livestream:** Embedded YouTube livestream video showing the real-time POV from the vehicle.
 
 ## Tech Stack
 
@@ -22,55 +22,54 @@ Mavis Sengkuni adalah aplikasi Monitoring Wahana atau Vehicle Monitoring System 
 * **Styling:** Tailwind CSS
 * **Database:** Firebase Realtime Database
 * **Mapping:** MapLibre GL & React Map GL
-* **Components:** * `react-wavify` (Animasi ombak header)
-    * `lucide-react` / Heroicons (Ikonografi)
+* **Components:** * `react-wavify` (Header wave animation)
+    * `lucide-react` / Heroicons (Iconography)
 
-## Struktur Data Firebase
+## Firebase Data Structure
 
-Aplikasi ini mengharapkan struktur data berikut pada Firebase:
+The application expects the following data structure on Firebase:
 * `Data/GPS_DATA`: Latitude, Longitude, COG.
 * `Data/Speed Over Ground`: SOG_KMH, SOG_KNOT, Heading.
-* `Data/Centerpoint Garis`: Gambar Base64 (Surface & Underwater), Date, Time.
-* `Data/Checkpoint`: Riwayat data tiap pos.
+* `Data/Centerpoint Garis`: Base64 Images (Surface & Underwater), Date, Time.
+* `Data/Checkpoint`: History data for each post.
 
-## Cara Menjalankan Lokal
+## Local Setup
 
-1.  **Clone repositori:**
+1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/username/mavis-sengkuni.git](https://github.com/username/mavis-sengkuni.git)
     cd mavis-sengkuni
     ```
 
-2.  **Instal dependensi:**
+2.  **Install dependencies:**
     ```bash
-    npm install requirements.txt
+    npm install
     ```
 
-3.  **Konfigurasi Firebase:**
-    Pastikan file `firebaseConfig.js` sudah dikonfigurasi dengan API Key proyek. Pakai .env.local kalo sempat.
+3.  **Firebase Configuration:**
+    Ensure the `firebaseConfig.js` file is configured with your project API Key. Use `.env.local` if possible.
 
-4.  **Jalankan aplikasi:**
+4.  **Run the application:**
     ```bash
     npm run dev
     ```
-    Aplikasi akan tersedia di `http://localhost:3000`.
+    The application will be available at `http://localhost:3000`.
 
 ![Dashboard Screenshot](public/main2.png)
 
 ---
-# 🖥️ Database Control Center - Dashboard Mengubah Data Firebase
+# 🖥️ Database Control Center - Firebase Data Management Dashboard
 
-Database Control Center berfungsi menambah, menghapus, dan mengedit data di Firebase untuk menyesuaikan kondisi data yang akan ditampilkan di sistem monitoring sebelum lomba dimulai.
+The Database Control Center functions to add, delete, and edit data in Firebase to adjust the data conditions to be displayed in the monitoring system before the competition begins.
 
 ![Dashboard Screenshot](public/db.png)
 
-## Fitur Utama
+## Key Features
 
-* **Reset Database:** Fitur untuk mengosongkan nilai dinamis databases seperti checkpoint time, serta surface dan underwater capture sebelum memulai misi baru.
-* **Mission Planner:** Mengunggah koordinat lintasan (Lintasan A atau B) secara otomatis ke Firebase.
-* **Data Export:** Mengunduh log riwayat checkpoint dan data telemetri ke format JSON atau Excel (.xlsx) untuk analisis pasca-misi lomba.
-* **Simulation Monitoring:** Menjalankan sebuah script python yang mensimulasikan jalannya wahana.
-
+* **Reset Database:** A feature to clear dynamic database values such as checkpoint times, as well as surface and underwater captures before starting a new mission.
+* **Mission Planner:** Automatically upload track coordinates (Track A or B) to Firebase.
+* **Data Export:** Download checkpoint history logs and telemetry data in JSON or Excel (.xlsx) format for post-mission competition analysis.
+* **Simulation Monitoring:** Run a Python script that simulates the vehicle's movement.
 
 ## Tech Stack
 
@@ -79,35 +78,35 @@ Database Control Center berfungsi menambah, menghapus, dan mengedit data di Fire
 * **Components:** * `pandas`
     * `Openpyxl`
 
-## Cara Menjalankan Lokal
+## Local Setup
 
-1.  **Clone repositori:**
+1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/username/mavis-sengkuni.git](https://github.com/username/mavis-sengkuni.git)
     cd mavis-sengkuni
     ```
 
-2.  **Instal dependensi:**
+2.  **Install dependencies:**
     ```bash
-    pip install py_requirements.txt
+    pip install -r py_requirements.txt
     ```
 
-3.  **Persiapan Konfigurasi Firebase:**
-    Pastikan file `serviceAccountKey.json` sudah diunduh dan database URL sudah disalin.
+3.  **Firebase Configuration Preparation:**
+    Ensure the `serviceAccountKey.json` file has been downloaded and the database URL has been copied.
 
-4.  **Jalankan aplikasi:**
+4.  **Run the application:**
     ```bash
     streamlit run crud.py
     ```
-    Aplikasi akan tersedia di `http://localhost:8501/`.
+    The application will be available at `http://localhost:8501/`.
 
-5.  **Konfigurasi Firebase:**
-    Pilih file `serviceAccountKey.json` dan masukkan database URL sesuai arahan.
-    
-6.  **Menjalankan Simulasi:**
-    Di Terminal lain jalankan
+5.  **Firebase Configuration:**
+    Select the `serviceAccountKey.json` file and enter the database URL as directed.
+
+6.  **Running the Simulation:**
+    In another terminal, run:
     ```bash
     python simulasi.py
     ```
 ---
-**Mavis Team - Universitas Negeri Yogyakarta**
+**Mavis Team - Yogyakarta State University**
